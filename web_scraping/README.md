@@ -1,1 +1,1 @@
-How to Scrape Stock Prices from Yahoo Finance with Python
+This application Scrape Stock Prices from Yahoo Finance using python.
