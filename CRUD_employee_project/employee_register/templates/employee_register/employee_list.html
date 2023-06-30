@@ -1,0 +1,41 @@
+{% extends "employee_register/base.html"  %}
+
+{% block content %}
+
+<p> We will show list of emplyeees her</p>
+
+<table class="table table-borderless">
+    <thead class="border-border">
+        <tr>
+            <td>Full Name</td>
+            <td>Mobile</td>
+            <td>Position</td>
+            <td> <a href="{% url 'employee_insert' %}"  class="btn btn-outline-success"><i class="fas fa-edit fa-lg"></i> Add New</a></td>
+        </tr>
+    </thead>
+
+    <body>
+        {% for employee in employee_list %}
+        <tr>
+            <td>{{employee.fullname}}</td>
+            <td>{{employee.mobile}}</td>
+            <td>{{employee.position}}</td>
+            <td> <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0 ">
+                <i class="far fa-edit fa-lg"></i> Edit
+                </a>
+                <form class="d-line" action="{% url 'employee_delete' employee.id %} " method="post">
+                    {%csrf_token %}
+                    <button class="btn " type="submit" >
+                        <i class="far fa-trash-alt fa-lg text-danger float-right">
+                        </i> Delete
+                    </button>
+                </form>
+            </td>
+            
+           
+        </tr>
+
+        {% endfor %}
+    </body>
+</table>
+{% endblock content %}
