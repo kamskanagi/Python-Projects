@@ -22,3 +22,5 @@ This project is a secure password manager. It showcases the use of encryption li
 ### 6. Rock-Paper-Scissors Game
 A simple and fun implementation of the classic Rock, Paper, Scissors game. It serves as a great example of control flow and handling user input.
 
+### 7. Django CRUD Operation
+This project is a web application developed using Django, a high-level Python web framework. It demonstrates the CRUD (Create, Read, Update, Delete) operations which form the basis of any data-driven application. The application allows users to create, retrieve, update, and delete records in a database, showcasing Django's ease of use for database manipulation. Users interact with the application through a simple yet functional web interface, with HTML templates rendered via Django's template engine.
